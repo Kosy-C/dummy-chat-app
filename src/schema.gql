@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ChatRooms {
+  roomId: String!
+}
+
+type Payload {
+  roomId: String!
+  message: String!
+  sender: String!
+}
+
+type Query {
+  dummyQuery: String!
+}
+
+type Mutation {
+  createChatRoom: ChatRooms!
+  joinChatRoom(roomId: String!): ChatRooms!
+  sendMessage(roomId: String!, message: String!, sender: String!): Payload!
+}
+
+type Subscription {
+  newMessage(roomId: String!): Payload!
+}
